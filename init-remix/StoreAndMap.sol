@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.8;
 
-contract SimpleStorage {
+contract StoreAndMap {
 	uint256 favoriteNumber;
 
 	struct People {
