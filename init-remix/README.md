@@ -2,7 +2,7 @@
 
 This repository is for you to see how to compile and deploy smart contracts on [remix](https://remix.ethereum.org).
 
-## Simple Storage
+## StoreAndMap
 
 ### SPDX License Identifier
 
@@ -39,3 +39,21 @@ This function takes the two parameters of `_name` and `_favoriteNumber` from the
 Public functions/ Variables can be used both externally and internally. For public state variable, Solidity automatically creates a getter function.
 
 ## Factory
+
+This contract deploys the `StoreAndMap` contract and interacts with it.
+
+### Creating StoreAndMap Contract
+
+On line 10 we have a function in which we create a new `StoreAndMap` contract on line 11 and pushes it to an array called `SAMArray` which we had initialized on line 8.
+
+### Interacting with StoreAndMap contract
+
+In order to interact with a contract we need two things: Address and ABI of that contract. In our example here, we've actually created the ABI by importing it on line 5.
+
+#### factoryStore function
+
+This function gets an index and a favorite number as parameters. The index is created using `createSAMContract` function, and here we use `StoreAndMap` contract's `store` function to store the favorite number on that index.
+
+#### factoryGet function
+
+This function gets the index of the created contract and uses `StoreAndMap` contract's `retrieve` function to get the associated favorite number. 
