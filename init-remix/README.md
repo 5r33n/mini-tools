@@ -2,6 +2,12 @@
 
 This repository is for you to see how to compile and deploy smart contracts on [remix](https://remix.ethereum.org).
 
+### Contents
+
+1. [StoreAndMap Contract](#storeandmap-contract)
+2. [Factory Contract](#factory-contract)
+3. [Inheritance Contract](#inheritance-contract)
+
 ## StoreAndMap Contract
 
 ### SPDX License Identifier
