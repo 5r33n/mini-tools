@@ -13,7 +13,9 @@ contract Factory {
 	}
 
 	function factoryStore(uint256 _samIndex, uint256 _samNumber) public {
-		// We need an Address and an ABI
+		// To interact with any contract we will need two things from that contract:
+		// 1. Address
+		// 2. ABI: Application Binary Interface (how it can interact with the contract)
 		SAMArray[_samIndex].store(_samNumber);
 	}
 
