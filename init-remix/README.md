@@ -2,7 +2,7 @@
 
 This repository is for you to see how to compile and deploy smart contracts on [remix](https://remix.ethereum.org).
 
-## StoreAndMap
+## StoreAndMap Contract
 
 ### SPDX License Identifier
 
@@ -38,7 +38,7 @@ This function takes the two parameters of `_name` and `_favoriteNumber` from the
 
 Public functions/ Variables can be used both externally and internally. For public state variable, Solidity automatically creates a getter function.
 
-## Factory
+## Factory Contract
 
 This contract deploys the `StoreAndMap` contract and interacts with it.
 
@@ -56,4 +56,15 @@ This function gets an index and a favorite number as parameters. The index is cr
 
 #### factoryGet function
 
-This function gets the index of the created contract and uses `StoreAndMap` contract's `retrieve` function to get the associated favorite number. 
+This function gets the index of the created contract and uses `StoreAndMap` contract's `retrieve` function to get the associated favorite number.
+
+## Inheritance Contract
+
+By using `is StoreAndMap` the current contract inherits all the functionalities of `StoreAndMap` contract.
+
+In order to change some function from the parent contract in this inherited function, we need to do 2 things:
+
+1. Add `override` to the function in the current contract.
+2. Add `virtual` to the function in the parent contract.
+
+In this example we have added `override` on line 8, and added `virtual` in the `StoreAndMap` contract to the `store` function on line 17.
