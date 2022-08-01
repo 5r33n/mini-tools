@@ -37,6 +37,7 @@ Reverts to the `NotOwner()` error before `withdraw()` function is executed on li
 
 Here's a small flowchart on how `fallback()` and `receive()` functions are called in order.
 
+```
 // Ether is sent to contract
 //      is msg.data empty?
 //          /   \ 
@@ -47,6 +48,7 @@ Here's a small flowchart on how `fallback()` and `receive()` functions are calle
 //   yes   no
 //  /        \
 //receive()  fallback()
+```
 
 ### receive
 
