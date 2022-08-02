@@ -19,6 +19,9 @@ library PriceConverter {
 		returns (uint256)
 	{
 		uint256 ethPrice = getPrice();
+
+		// because both ethPrice and ethAmount have 10**18, we need to 
+		// divide by 10**18 once to cancel it out
 		uint256 ethAmountInUsd = (ethPrice * ethAmount) / 10 ** 18;
 		return ethAmountInUsd;
 	}
