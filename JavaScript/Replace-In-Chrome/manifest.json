@@ -1,0 +1,13 @@
+{
+	"name": "Extension Name",
+	"version": "0.1",
+	"permissions": [ "activeTab" ],
+	"content_scripts": [
+		{
+			"matches": ["https://google.com"],
+			"js": ["replace.js"],
+			"run_at": "document_end"
+		}
+	],
+	"manifest_version": 3
+}
