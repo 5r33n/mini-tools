@@ -16,10 +16,12 @@ call plug#begin()
     Plug 'neoclide/coc.nvim',  {'branch': 'master', 'do': 'yarn install'}
     Plug 'airblade/vim-gitgutter'
     Plug 'linusng/green-shades.vim'
-    set encoding=utf8
+    Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 colorscheme green-shades
+set encoding=utf8
 
 
 " Options
@@ -248,3 +250,10 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Neoformat
+autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.ts* Neoformat
+autocmd BufWritePre *.sol Neoformat
+autocmd BufWritePre *.py Neoformat
+let g:neoformat_try_node_exe = 1
